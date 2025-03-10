@@ -38,6 +38,9 @@ class Student(Person):
     def prettyPrint(self):
         print("Voglio stampare meglio")
 
+    def __copy__(self):
+        return Student(self.nome, self.cognome, self.eta, self.capelli, self.occhi, self.casa, self.incantesimo)
+
 
 class Teacher(Person):
     def __init__(self, nome, cognome, eta,
